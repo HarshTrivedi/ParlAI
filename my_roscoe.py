@@ -7,14 +7,12 @@
 """
 Evaluate dataset of generated chains-of-resoning.
 
-Usage:
-python projects/roscoe/roscoe.py
+Example Usage:
+python my_roscoe.py -p inputs/sample.jsonl -t sim_sce -m facebook/roscoe-512-roberta-base
 """
 import json
 import os
-from typing import List
 
-import torch
 from nltk.tokenize import sent_tokenize
 
 from projects.roscoe.score import (
@@ -22,13 +20,7 @@ from projects.roscoe.score import (
     Chain,
     Evaluator,
     REASONING_SCORES,
-    UNSUPERVISED_SCORES,
     SENT_TRANS,
-)
-from projects.roscoe.utils import (
-    print_and_reset_max_gpu_memory,
-    save_scores,
-    split_gsm8k_gpt3_generations_to_steps,
 )
 
 from parlai.core.params import ParlaiParser
