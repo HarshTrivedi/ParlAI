@@ -145,7 +145,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--output-directory',
         type=str,
-        default="outputs",
+        default="roscoe_outputs",
         help='Where to save the scores.',
     )
 
@@ -161,8 +161,8 @@ if __name__ == '__main__':
 
     input_file_path = opt['dataset_path']
 
-    os.makedirs(opt['output_directory'], exist_ok=True)
     output_directory = os.path.join(opt['output_directory'], opt["model_name"].split('/')[-1])    
+    os.makedirs(output_directory, exist_ok=True)
     out_p = os.path.join(
         output_directory, input_file_path.split('.')[0].replace('/', '__') + ".json"
     )
