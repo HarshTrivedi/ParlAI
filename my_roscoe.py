@@ -8,7 +8,7 @@
 Evaluate dataset of generated chains-of-resoning.
 
 Example Usage:
-python my_roscoe.py -p inputs/sample.jsonl -t sim_sce -m facebook/roscoe-512-roberta-base
+python my_roscoe.py -p roscoe_inputs/sample.jsonl -t sim_sce -m facebook/roscoe-512-roberta-base
 """
 import json
 import os
